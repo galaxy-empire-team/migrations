@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE SCHEMA session_beta;
+CREATE SCHEMA IF NOT EXISTS session_beta;
 -- +goose StatementEnd
 
 -- +goose Down

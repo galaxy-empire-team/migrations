@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS session_beta.users (
     created_at timestamptz DEFAULT NOW()
 );
 
-CREATE INDEX idx_user_login ON session_beta.users(login);
+CREATE INDEX IF NOT EXISTS idx_user_login ON session_beta.users(login);
 
 -- +goose StatementEnd
 
