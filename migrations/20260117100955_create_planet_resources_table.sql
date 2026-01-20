@@ -2,7 +2,7 @@
 -- +goose StatementBegin
 CREATE TABLE IF NOT EXISTS session_beta.planet_resources (
     id serial PRIMARY KEY,
-    planet_id uuid NOT NULL,
+    planet_id uuid UNIQUE NOT NULL,
     metal bigint NOT NULL,
     crystal bigint NOT NULL,
     gas bigint NOT NULL,
