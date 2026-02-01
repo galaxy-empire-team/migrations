@@ -10,12 +10,12 @@ CREATE TABLE IF NOT EXISTS session_beta.building_events (
     CONSTRAINT unique_planet_build_type UNIQUE(planet_id, build_type)
 );
 
-CREATE INDEX IF NOT EXISTS finished_time ON session_beta.building_events(finished_at);
+CREATE INDEX IF NOT EXISTS building_events_finished_time ON session_beta.building_events(finished_at);
 
 -- +goose StatementEnd
 
 -- +goose Down
 -- +goose StatementBegin
-DROP INDEX IF EXISTS finished_time;
+DROP INDEX IF EXISTS building_events_finished_time;
 DROP TABLE IF EXISTS session_beta.building_events;
 -- +goose StatementEnd
