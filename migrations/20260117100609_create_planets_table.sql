@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS session_beta.planets (
 );
 
 CREATE INDEX IF NOT EXISTS idx_user_id ON session_beta.planets(user_id);
+CREATE INDEX IF NOT EXISTS idx_x_y_z ON session_beta.planets(x, y, z);
 
 CREATE UNIQUE INDEX IF NOT EXISTS idx_only_one_capitol_per_user 
     ON session_beta.planets(user_id) 

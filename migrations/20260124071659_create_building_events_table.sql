@@ -3,11 +3,11 @@
 CREATE TABLE IF NOT EXISTS session_beta.building_events (
     id serial PRIMARY KEY,
     planet_id uuid NOT NULL,
-    build_type text NOT NULL,
+    building_id int NOT NULL,
     started_at timestamptz NOT NULL,
     finished_at timestamptz NOT NULL,
 
-    CONSTRAINT unique_planet_build_type UNIQUE(planet_id, build_type)
+    CONSTRAINT unique_planet_building_id UNIQUE(planet_id, building_id)
 );
 
 CREATE INDEX IF NOT EXISTS building_events_finished_time ON session_beta.building_events(finished_at);
