@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS session_beta.mission_events (
     planet_to_x int NOT NULL,
     planet_to_y int NOT NULL,
     planet_to_z int NOT NULL,
+    fleet jsonb NOT NULL,
     started_at timestamptz NOT NULL,
     finished_at timestamptz NOT NULL
 );
