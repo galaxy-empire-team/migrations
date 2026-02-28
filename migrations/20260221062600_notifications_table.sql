@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE TABLE IF NOT EXISTS session_beta.notifications (
+CREATE TABLE IF NOT EXISTS session_beta.s_notifications (
     id serial PRIMARY KEY,
     notification_type text NOT NULL,
 

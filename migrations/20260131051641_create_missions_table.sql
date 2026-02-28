@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE TABLE IF NOT EXISTS session_beta.missions (
+CREATE TABLE IF NOT EXISTS session_beta.s_missions (
     id serial PRIMARY KEY,
     mission_type text NOT NULL,
 

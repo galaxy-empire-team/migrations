@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS session_beta.user_notifications (
     created_at timestamptz NOT NULL DEFAULT NOW(),
 
     FOREIGN KEY (user_id) REFERENCES session_beta.users(id) ON DELETE RESTRICT,
-    FOREIGN KEY (notification_id) REFERENCES session_beta.notifications(id) ON DELETE RESTRICT
+    FOREIGN KEY (notification_id) REFERENCES session_beta.s_notifications(id) ON DELETE RESTRICT
 );
 
 -- +goose StatementEnd

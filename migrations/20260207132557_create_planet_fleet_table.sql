@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS session_beta.planet_fleet (
     updated_at timestamptz NOT NULL DEFAULT NOW(),
 
     FOREIGN KEY (planet_id) REFERENCES session_beta.planets(id) ON DELETE RESTRICT,
-    FOREIGN KEY (fleet_id) REFERENCES session_beta.fleet(id) ON DELETE RESTRICT,
+    FOREIGN KEY (fleet_id) REFERENCES session_beta.s_fleet(id) ON DELETE RESTRICT,
 
     UNIQUE (planet_id, fleet_id)
 );

@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE TABLE IF NOT EXISTS session_beta.buildings (
+CREATE TABLE IF NOT EXISTS session_beta.s_buildings (
     id serial PRIMARY KEY,
     building_type text NOT NULL,
     level integer NOT NULL,

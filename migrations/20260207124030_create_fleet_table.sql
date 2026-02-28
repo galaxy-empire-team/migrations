@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE TABLE IF NOT EXISTS session_beta.fleet (
+CREATE TABLE IF NOT EXISTS session_beta.s_fleet (
     id serial PRIMARY KEY,
     ship_type text NOT NULL,
     attack integer NOT NULL,
