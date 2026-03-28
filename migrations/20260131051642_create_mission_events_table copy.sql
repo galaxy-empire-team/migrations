@@ -12,11 +12,7 @@ CREATE TABLE IF NOT EXISTS session_beta.event_missions (
     cargo jsonb DEFAULT NULL,
     is_returning boolean NOT NULL,
     started_at timestamptz NOT NULL,
-    finished_at timestamptz NOT NULL,
-
-    FOREIGN KEY (user_id) REFERENCES session_beta.users(id),
-    FOREIGN KEY (planet_from) REFERENCES session_beta.planets(id),
-    FOREIGN KEY (mission_id) REFERENCES session_beta.s_missions(id)
+    finished_at timestamptz NOT NULL
 );
 
 CREATE INDEX IF NOT EXISTS mission_events_finished_time ON session_beta.event_missions(finished_at);
