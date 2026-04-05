@@ -8,7 +8,9 @@ CREATE TABLE IF NOT EXISTS session_beta.planet_buildings (
     created_at timestamptz NOT NULL DEFAULT NOW(),
 
     FOREIGN KEY (planet_id) REFERENCES session_beta.planets(id) ON DELETE RESTRICT,
-    FOREIGN KEY (building_id) REFERENCES session_beta.s_buildings(id) ON DELETE RESTRICT
+    FOREIGN KEY (building_id) REFERENCES session_beta.s_buildings(id) ON DELETE RESTRICT,
+
+    UNIQUE(planet_id, building_id)
 );
 
 CREATE INDEX IF NOT EXISTS idx_planet_id ON session_beta.planet_buildings(planet_id);
